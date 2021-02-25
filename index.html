@@ -1,10 +1,100 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body{
+             background-color:#4c90af;
+             margin-top:0px;
+             margin-right:200px;
+             margin-left: 200px;
+             margin-bottom:50px;
+        }
+            input[type=text], input[type=password]{
+                width:80%;
+                padding:12px 20px;
+                margin:8px 0;
+                border:2px solid #ccc;
+                box-sizing:border-box;
+            }
+            button{
+                font-family: 'Nunito', sans-serif;
+                background-color:grey;
+                border-radius: 2px;
+                border: 2px solid #4c77af;
+                display:inline-block;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                color: #FFFFFF;
+                font-size: 18px;
+                padding: 10px;
+                width: 100px;
+                transition: all 0.5s;
+                cursor: pointer;
+                text-align: center;
+                opacity:0.9;
+            }
+            button:hover{
+                opacity: 1;
+            }
+            .container{
+                margin-left: 25%;
+                margin-right: 25%;
+                padding: 16px;
+                font-family: 'Nunito', sans-serif;
+                background-color: azure;
+                text-align:center;
+            }
+            h1{
+                font-family: 'Akaya Telivigala', cursive;
+               font-weight:bolder;
+               padding: 10px;
+               text-align: center;
+               font-size: 60px;
+               color: white;
+            }
+            h2{
+                color:rgb(3, 57, 119);
+                font-family: 'Open Sans', sans-serif; 
+                font-weight:bolder;
+                text-align: center;
+                font-size: 35px;
+                
+            }
+            label{
+                color:rgb(3, 57, 119);
+                font-family: 'Open Sans', sans-serif; 
+                font-weight:bolder;
+                
+                text-align: center;  
+            }
+            img{
+                border-radius: 200px;
+                
+                box-shadow: 0 0 4px 2px rgba(0, 140, 186, 0.5);
+                width: 180px;
+                height: 180px;
+            }
+           
+        </style>
         <title>
-Home page
+Notesapp Login page
         </title>
     </head> 
     <body>
 <h1>Welcome To Notes App</h1>
+<div class="container">
+<h2>Login here</h2>
+<img src="/Notes App/images/login.png">
+   <form action="/action_page.php" method="get" id="Loginform">
+       
+         <label><b>Username</b></label>
+         <input type="text" placeholder="Enter Username" name="uname" required><br>
+         <label><b>Password</b></label>
+         <input type="password" placeholder="Enter Password" name="pswd" required><br>
+         <button type="submit">Sign In</button>
+         <button type="button">Sign Up</button>
+       </div>
+      
+   </form>
     </body>
 </html>
