@@ -1,9 +1,16 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <script language="javascript">
+            onclick="window.open('http://www.website.com/page')" 
+        </script>
         <style>
-        body{
+        body{ 
+             background-image: url('images/blue.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;   
              background-color:#4c90af;
              margin-top:0px;
              margin-right:200px;
@@ -91,8 +98,8 @@ Notesapp Login page
          <input type="text" placeholder="Enter Username" name="uname" required><br>
          <label><b>Password</b></label>
          <input type="password" placeholder="Enter Password" name="pswd" required><br>
-         <button type="submit">Sign In</button>
-         <button type="button">Sign Up</button>
+         <button type="submit" >Sign In</button>
+         <button type="button"onclick="window.open('file:///D:/Notes%20App/signupform.html')" >Sign Up</button>
        </div>
       
    </form>

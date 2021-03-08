@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>
         Home page
     </title>
     <link rel="stylesheet" href="/Notes App/css/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url('images/pen.jpg'), url('images/women.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
 
 </head>
 
@@ -15,35 +23,33 @@
     <header>
         <section>
             <nav class="navbar" style="background-color:rgb(68, 66, 66);">
-                <a href="#">Home</a>
+                <a href="file:///D:/Notes%20App/homepage.html"><i class="fa fa-home"> Home</i></a>
                 <a href="#">Contact</a>
                 <a href="#">About</a>
             </nav>
-        </section>
+        </section><br>
         <h1>Welcome to Your Notes Area</h1>
-       
-       <div class=left>
-        <p id="quote"><b>Go Ahead And Make your New Notes!!</b></p>
-        <main>
-        <div id="top">  
-        <img src="/Notes App/images/notebook.jpg">
-        </div>
-       
-        <div class="Note">
-            <h2>Create Notes</h2>
-            <div id="container">
-                <textarea id="area" rows="10" cols="50"></textarea><br>
-                <button type="button">ADD NOTE</button>
-            </div>
-        </main>
-            <div id="previous notes">
+        <div class=left>
+            <p id="quote"><b>Go Ahead And Make your New Notes!!</b></p>
+            <main>
+                <div class="Note">
+                    <h2>Here's the button to create new notes!!</h2>
+                    <div id="container">
+                        <button type="button" onclick="window.open('file:///D:/Notes%20App/addnotes.html')">CREATE NEW NOTE</button>
+                    </div>
+            </main>
+            <div id="prevnotes">
                 <p id="prevnotes">YOUR PREVIOUS NOTES</p>
             </div>
+            <div id="notes">
+            </div> 
+            <script src="homepage.js"></script>
     </header>
     <footer>
         <hr>
     </footer>
-</div>
+    </div>
+    
 </body>
 
 </html>

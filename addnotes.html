@@ -1,0 +1,75 @@
+<html>
+    <head>
+
+        <title>
+            Add Notes
+        </title>
+        
+        <style>
+             body {
+            background-image: url('images/laptop1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:100% 120%;
+            margin-top: 100px;
+            margin-right: 200px;
+            margin-left: 200px;
+            margin-bottom: 50px;
+        }
+        button{
+    font-family: 'Nunito', sans-serif;
+    background-color:rgb(48, 47, 47);
+    border-radius: 5px;
+    border: 2px solid #4c77af;
+    display:inline-block;
+    box-shadow: 0 9px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 15px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-align: center;
+    opacity:1;
+    background-image: linear-gradient(bottom, rgb(41, 42, 43) 0%, rgb(97,155,203) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(30, 31, 32) 0%, rgb(97,155,203) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(40, 41, 43) 0%, rgb(97,155,203) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(64, 65, 66) 0%, rgb(97,155,203) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(24, 25, 26) 0%, rgb(97,155,203) 100%);
+ 
+}
+button:hover{
+    opacity: 0.8;
+}
+.container {
+            padding: 16px;
+            align-items: center;
+            font-family: 'Nunito', sans-serif;
+            text-align: center;
+        }
+            textarea{
+                box-sizing:initial;
+                box-shadow: 0 9px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                rows:20;
+                columns: 20;
+}
+h1 {
+            color: rgb(14, 16, 19);
+            font-family: 'Shippori Mincho B1', serif;
+            font-weight: bolder;
+            text-align: left;
+            font-size: 35px;
+
+        }
+        </style>
+    </head>
+    <body>
+       <h1> ADD YOUR NEW NOTES HERE</h1> 
+       <div id="container">
+        <textarea id="addtxt" rows="10" cols="50"></textarea><br>
+        <button id= "addbtn" type="submit">ADD NOTE</button>
+    </div>
+    <div id="notes"></div>
+    <script src="app.js"></script>
+    </body>
+</html>

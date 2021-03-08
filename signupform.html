@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Sign-Up Form
+    </title>
+    <style>
+        body {
+            background-image: url('images/downcopy.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            margin-top: 100px;
+            margin-right: 200px;
+            margin-left: 200px;
+            margin-bottom: 50px;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 80%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        button {
+            font-family: 'Nunito', sans-serif;
+            background-color: rgb(48, 47, 47);
+            border-radius: 5px;
+            border: 2px solid #4c77af;
+            display: inline-block;
+            box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            color: #FFFFFF;
+            font-size: 15px;
+            padding: 15px;
+            width: 150px;
+            transition: all 0.5s;
+            cursor: pointer;
+            text-align: center;
+            opacity: 1;
+            margin-left: 27%;
+            background-image: linear-gradient(bottom, rgb(41, 42, 43) 0%, rgb(97, 155, 203) 100%);
+            background-image: -o-linear-gradient(bottom, rgb(30, 31, 32) 0%, rgb(97, 155, 203) 100%);
+            background-image: -moz-linear-gradient(bottom, rgb(40, 41, 43) 0%, rgb(97, 155, 203) 100%);
+            background-image: -webkit-linear-gradient(bottom, rgb(64, 65, 66) 0%, rgb(97, 155, 203) 100%);
+            background-image: -ms-linear-gradient(bottom, rgb(24, 25, 26) 0%, rgb(97, 155, 203) 100%);
+
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .container {
+            margin-left: 27%;
+            margin-right: 15%;
+            padding: 16px;
+            align-items: center;
+            font-family: 'Nunito', sans-serif;
+            text-align: left;
+        }
+
+        h1 {
+            color: rgb(14, 16, 19);
+            font-family: 'Shippori Mincho B1', serif;
+            font-weight: bolder;
+            text-align: center;
+            font-size: 50px;
+
+        }
+
+        h4 {
+            color: rgb(107, 104, 104);
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-weight: lighter;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Join Notes App</h4>
+    <h1>Create Your Account</h1>
+    <div class="container">
+        <form action="/action_page.php" method="get" id="Signupform">
+            <label><b>Username</b></label><br>
+            <input type="text" name="uname" required><br>
+            <label><b>Password</b></label><br>
+            <input type="password" name="pswd" required><br>
+            <button type="submit">Create Account</button>
+    </div>
+    </div>
+</body>
+</html>
