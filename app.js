@@ -21,7 +21,7 @@ localStorage.setItem('notes',JSON.stringify(notesObj));
     addtxt.value="";
     console.log(notesObj);
     shownotes();
-    location.replace("file:///D:/Notes%20App/homepage.html");
+    location.replace("homepage.html");
     });
 
     function shownotes(){
