@@ -9,11 +9,19 @@ addbtn.addEventListener("click",function(e){
     else{
         notesObj=JSON.parse(notes);
     }
-    notesObj.push(addtxt.value);
-    localStorage.setItem("notes",JSON.stringify(notesObj));
+    
+//Add Date..
+let now = new Date();
+let dateTime = `${now.getDate()}-${now.getMonth()+1}-${now.getFullYear()} | ${now.getHours()}:${now.getMinutes()}`;
+let tempObj = { text: addtxt.value, time: dateTime };
+
+notesObj.push(tempObj);
+localStorage.setItem('notes',JSON.stringify(notesObj));
+	//..
     addtxt.value="";
     console.log(notesObj);
     shownotes();
+    location.replace("file:///D:/Notes%20App/homepage.html");
     });
 
     function shownotes(){
@@ -24,6 +32,4 @@ addbtn.addEventListener("click",function(e){
     else{
         notesObj=JSON.parse(notes);
     }
-  
 }
-

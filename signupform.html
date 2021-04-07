@@ -1,8 +1,14 @@
 <html>
-
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+    
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+    <script src="firebase.js"></script>
     <title>
         Sign-Up Form
     </title>
@@ -89,16 +95,19 @@
 </head>
 
 <body>
+    
     <h4>Join Notes App</h4>
     <h1>Create Your Account</h1>
     <div class="container">
         <form action="/action_page.php" method="get" id="Signupform">
-            <label><b>Username</b></label><br>
-            <input type="text" name="uname" required><br>
+            <label><b>E-mail ID</b></label><br>
+            <input type="text" name="email" id="userEmail" required><br>
             <label><b>Password</b></label><br>
-            <input type="password" name="pswd" required><br>
-            <button type="submit">Create Account</button>
+            <input type="password" name="pswd" id="userPassword" required><br>
+            <button type="button" id="btnSignup" onclick="signup()">Create Account</button>
+            <p>Already a member? Sign in: <a href="file:///D:/Notes%20App/index.html"><strong class="text-primary text-uppercase showSignInForm">Sign In</strong></a></p>
     </div>
     </div>
+
 </body>
 </html>

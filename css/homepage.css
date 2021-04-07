@@ -33,7 +33,7 @@ p{
   color:#032338;
 }
 #prevnotes{
-  margin:5%;
+  margin:2%;
   margin-left: 25%;
   margin-right: 25%;
   text-shadow:5px 5px 20px rgba(71, 70, 70, 0.014);
@@ -74,7 +74,7 @@ a:link, a:visited {
     margin-left: 4px;
   }
   
-  a:hover, a:active {
+    a:hover, a:active {
     background-color: rgb(123, 189, 219);
     color: white;
   }
@@ -85,7 +85,7 @@ a:link, a:visited {
     height:40vh
     
   }
-  button{
+  .btncreate{
     font-family: 'Nunito', sans-serif;
     background-color:rgb(48, 47, 47);
     border-radius: 5px;
@@ -108,10 +108,9 @@ a:link, a:visited {
     background-image: -ms-linear-gradient(bottom, rgb(24, 25, 26) 0%, rgb(97,155,203) 100%);
  
 }
-button:hover{
+.btncreate:hover{
     opacity: 0.8;
 }
 textarea{
   box-shadow: 0 9px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-

@@ -6,15 +6,99 @@
     <title>
         Home page
     </title>
-    <link rel="stylesheet" href="/Notes App/css/homepage.css">
+    <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <style>
         body {
             background-image: url('images/pen.jpg'), url('images/women.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
         }
+        .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: rgb(23, 79, 105);
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color:   rgb(23, 79, 105);
+  color: white;
+}
+.btnmodal {
+    background-color: white;
+    color: rgb(37, 36, 36);
+    border: 2px solid rgb(123, 189, 219);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 4px;
+}
+.btnmodal:hover{
+    background-color: rgb(123, 189, 219);
+    color: white;
+}
+
     </style>
 
 </head>
@@ -24,8 +108,8 @@
         <section>
             <nav class="navbar" style="background-color:rgb(68, 66, 66);">
                 <a href="file:///D:/Notes%20App/homepage.html"><i class="fa fa-home"> Home</i></a>
-                <a href="#">Contact</a>
-                <a href="#">About</a>
+                <button class ="btnmodal" id="myBtn">About</button>
+                <a  href="javascript:void(0)" class="dropbtn">Contact</a>
             </nav>
         </section><br>
         <h1>Welcome to Your Notes Area</h1>
@@ -35,21 +119,69 @@
                 <div class="Note">
                     <h2>Here's the button to create new notes!!</h2>
                     <div id="container">
-                        <button type="button" onclick="window.open('file:///D:/Notes%20App/addnotes.html')">CREATE NEW NOTE</button>
+                        <button class="btncreate" type="button" onclick="window.open('file:///D:/Notes%20App/addnotes.html')">CREATE NEW NOTE</button>
                     </div>
             </main>
+            <hr style="color: blanchedalmond; margin-left: 25%; margin-right: 25%;">
             <div id="prevnotes">
                 <p id="prevnotes">YOUR PREVIOUS NOTES</p>
             </div>
-            <div id="notes">
+            <div id="notes" style="display: -moz-inline-box">
             </div> 
             <script src="homepage.js"></script>
     </header>
-    <footer>
-        <hr>
-    </footer>
-    </div>
+    </div>    
     
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h3 style="font: 1em sans-serif; font-weight: bolder;">About</h3> 
+          </div>
+      <div class="modal-body">
+        <p>Notes App is a note taking Website which enables you to store notes for your future reference.</p>
+        <p>It has various features:
+            <ul>Better Storage</ul>
+            <ul>Easy Access</ul>
+            <ul>Edit Feature</ul><h3><b>You can edit the text any time by directly writing to the previosly added content</b></h3>
+            <b>If having better platform to store notes,then Why to carry bundles of notebooks...!!</br>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <h3></h3>
+      </div>
+    </div>
+  
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
 </body>
-
 </html>
