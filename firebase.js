@@ -28,7 +28,7 @@ function signin(){
   const promise = auth.signInWithEmailAndPassword(uemail,upassword);
   promise.catch(e => alert(e.message));
   alert("Signed In"+ uemail);
-  location.replace("file:///D:/Notes%20App/homepage.html")
+  location.replace("homepage.html")
 }
 auth.onAuthStateChanged(function(user){
 if(user){
